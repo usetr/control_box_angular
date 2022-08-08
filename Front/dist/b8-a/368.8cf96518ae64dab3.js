@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkB8A=self.webpackChunkB8A||[]).push([[368],{368:(d,s,e)=>{e.r(s),e.d(s,{MasterPageModule:()=>l});var o=e(808),u=e(466),M=e(223);let l=(()=>{class a{}return a.\u0275fac=function(t){return new(t||a)},a.\u0275mod=M.oAB({type:a}),a.\u0275inj=M.cJS({imports:[[o.ez,u.m]]}),a})()}}]);

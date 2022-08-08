@@ -1,0 +1,55 @@
+<div>
+  <h1>ISIDRO MANUEL AVILA MORALES</h1>
+</div>
+<div>
+
+  <h3>Lista de usuarios</h3>
+  <table class="default">
+ 
+    <tr>  
+      <th>Id</th>  
+      <th>Nombre</th>  
+      <th>Apellido</th>  
+      <th></th> 
+      <th></th> 
+    </tr>
+  
+    <tr *ngFor="let user of users">  
+      <td>{{user.id}}</td>  
+      <td>{{user.nombre}}</td>  
+      <td>{{user.apellido}}</td>
+      <th><button type="button">Editar</button></th> 
+      <th><button type="button"   (click)="deleteUser(user.id)">Eliminar</button> </th> 
+    </tr>  
+  </table>
+<br>
+<h3>Formulario para crear usuarios</h3>
+  <form #formulario [formGroup]="form">
+      <div>
+        
+        <div class="form-group">
+          <input type="text" pInputText  formControlName="nombre" maxlength="20"  class="form-control" placeholder="Nombre" >
+      
+        </div>
+
+
+        <div class="form-group">
+          <input type="text" pInputText  formControlName="apellido" maxlength="20"  class="form-control" placeholder="Apellido" >
+    
+        </div>
+
+        <div class="form-send">
+          <button type="submit" 
+                  [disabled]="!form.valid"
+                  (click)="createUser()"
+                   pButton 
+                   class="btn btn-large">Crear usuario</button>                  
+        </div> 
+
+
+      </div>
+   </form>
+</div>
+
+
+
